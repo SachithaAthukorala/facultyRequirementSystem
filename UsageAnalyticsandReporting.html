@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usage Analytics and Reporting</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .filter-section, .report-section {
+            margin-bottom: 20px;
+        }
+
+        .filter-section input, .filter-section select, .filter-section button {
+            padding: 10px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .chart-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .chart {
+            flex: 1;
+            margin: 0 10px;
+            padding: 20px;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .download-section button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .download-section button:hover {
+            background-color: #218838;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #007BFF;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Usage Analytics and Reporting</h1>
+    </header>
+
+    <div class="container">
+        <h2>Analytics Dashboard</h2>
+
+        <div class="filter-section">
+            <h3>Filter Data</h3>
+            <label for="date-range">Date Range:</label>
+            <input type="date" id="start-date"> to <input type="date" id="end-date">
+
+            <label for="resource-type">Resource Type:</label>
+            <select id="resource-type">
+                <option value="all">All</option>
+                <option value="room">Room</option>
+                <option value="equipment">Equipment</option>
+            </select>
+
+            <button>Apply Filters</button>
+        </div>
+
+        <div class="report-section">
+            <h3>Usage Reports</h3>
+            <div class="chart-container">
+                <div class="chart" id="chart1">Chart 1 (e.g., usage by resource)</div>
+                <div class="chart" id="chart2">Chart 2 (e.g., usage trends)</div>
+                <div class="chart" id="chart3">Chart 3 (e.g., anomalies)</div>
+            </div>
+        </div>
+
+        <div class="download-section">
+            <button>Download Report (CSV)</button>
+            <button>Download Report (PDF)</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Faculty Room & Equipment Management System</p>
+    </footer>
+</body>
+</html>

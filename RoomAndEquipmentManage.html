@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Room & Equipment Management</title>
+        <style>
+    /* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  color: #4caf50;
+  margin: 0;
+}
+
+section {
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+section h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+table th {
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #0056b3;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #a71d2a;
+}
+
+.save-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.save-btn:hover {
+  background-color: #3e8e41;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 15px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#error-message {
+  padding: 15px;
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  border-radius: 5px;
+}
+
+  </style>
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                <h1>Room & Equipment Management</h1>
+            </header>
+
+            <!-- Access Management Module Section -->
+            <section class="management-access">
+                <h2>Access Management Module</h2>
+                <p>Administrator logged in successfully.</p>
+            </section>
+
+            <!-- Display Resources Section -->
+            <section class="resource-list">
+                <h2>Available Rooms & Equipment</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Resource ID</th>
+                            <th>Name</th>
+                            <th>Type</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>R101</td>
+                            <td>Conference Room</td>
+                            <td>Room</td>
+                            <td>Available</td>
+                            <td>
+                                <button class="edit-btn">Edit</button>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>E202</td>
+                            <td>Projector</td>
+                            <td>Equipment</td>
+                            <td>In Use</td>
+                            <td>
+                                <button class="edit-btn">Edit</button>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Update or Add Resource Section -->
+            <section class="update-resource">
+                <h2>Update or Add Resource</h2>
+                <form id="resource-form">
+                    <label for="resource-id">Resource ID:</label>
+                    <input type="text" id="resource-id"
+                        placeholder="Enter Resource ID" required>
+
+                    <label for="resource-name">Name:</label>
+                    <input type="text" id="resource-name"
+                        placeholder="Enter Resource Name" required>
+
+                    <label for="resource-type">Type:</label>
+                    <select id="resource-type" required>
+                        <option value>Select Type</option>
+                        <option value="Room">Room</option>
+                        <option value="Equipment">Equipment</option>
+                    </select>
+
+                    <label for="resource-status">Status:</label>
+                    <select id="resource-status" required>
+                        <option value>Select Status</option>
+                        <option value="Available">Available</option>
+                        <option value="In Use">In Use</option>
+                    </select>
+
+                    <button type="submit" class="save-btn">Save Changes</button>
+                </form>
+            </section>
+
+            <!-- Validation Errors Section -->
+            <section class="validation-errors">
+                <h2>Validation Errors</h2>
+                <div id="error-message">
+                    <p>No errors detected. Any validation messages will appear
+                        here.</p>
+                </div>
+            </section>
+        </div>
+    </body>
+</html>

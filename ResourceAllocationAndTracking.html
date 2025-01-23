@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resource Allocation and Tracking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .resource-container {
+            background: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 100%;
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .resource-container h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 4px rgba(0, 123, 255, 0.3);
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        .button-secondary {
+            background-color: #6c757d;
+        }
+
+        .button-secondary:hover {
+            background-color: #5a6268;
+        }
+
+        .resource-list {
+            margin-top: 20px;
+        }
+
+        .resource-list h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .resource-item {
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .resource-item button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 5px 10px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .resource-item button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="resource-container">
+        <h1>Resource Allocation and Tracking</h1>
+
+        <form>
+            <div class="form-group">
+                <label for="resource-search">Search Resource</label>
+                <input type="text" id="resource-search" name="resource-search" placeholder="Enter Resource Name or ID">
+            </div>
+
+            <div class="button-group">
+                <button type="button" class="button">Search</button>
+                <button type="button" class="button button-secondary">Clear</button>
+            </div>
+        </form>
+
+        <div class="resource-list">
+            <h2>Available Resources</h2>
+
+            <div class="resource-item">
+                <span>3D Glove - ID: 12345</span>
+                <button>View Details</button>
+            </div>
+
+            <div class="resource-item">
+                <span>High-Performance Server - ID: 54321</span>
+                <button>View Details</button>
+            </div>
+
+            <div class="resource-item">
+                <span>Robotic Arm - ID: 67890</span>
+                <button>View Details</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

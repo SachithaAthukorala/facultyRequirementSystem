@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Conflicting Booking Handling</title>
+        <style>
+    /* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 2px solid #ff5722;
+}
+
+header h1 {
+  color: #ff5722;
+  margin: 0;
+}
+
+section {
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+section h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#conflict-list, #review-details {
+  border-top: 1px solid #ddd;
+  margin-top: 15px;
+  padding-top: 15px;
+  color: #666;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.contact-btn, button.notify-btn {
+  background-color: #007bff;
+  color: #fff;
+}
+
+button.resolve-btn {
+  background-color: #28a745;
+  color: #fff;
+}
+
+button[disabled] {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button:hover:not([disabled]) {
+  opacity: 0.9;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  section {
+    padding: 15px;
+  }
+}
+
+  </style>
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                <h1>Conflicting Booking Handling</h1>
+            </header>
+
+            <!-- Conflict Detection Section -->
+            <section class="conflict-detection">
+                <h2>Detected Booking Conflicts</h2>
+                <div id="conflict-list">
+                    <p>No conflicts detected. If conflicts occur, they will be
+                        listed here.</p>
+                </div>
+            </section>
+
+            <!-- Review and Resolve Section -->
+            <section class="review-resolve">
+                <h2>Review and Resolve Conflicts</h2>
+                <div id="review-details">
+                    <p>Select a conflict from the list to review details.</p>
+                </div>
+                <button id="resolve-conflict" class="resolve-btn"
+                    disabled>Resolve Conflict</button>
+            </section>
+
+            <!-- Contact Users Section -->
+            <section class="contact-users">
+                <h2>Contact Affected Users</h2>
+                <form id="contact-form">
+                    <label for="user-message">Message to Users:</label>
+                    <textarea id="user-message" rows="4"
+                        placeholder="Enter a message for the affected users..."></textarea>
+                    <button type="submit" class="contact-btn">Send
+                        Notification</button>
+                </form>
+            </section>
+
+            <!-- Notify Users Section -->
+            <section class="notify-users">
+                <h2>Resolution Notification</h2>
+                <form id="notify-form">
+                    <label for="resolution-message">Notification
+                        Message:</label>
+                    <textarea id="resolution-message" rows="4"
+                        placeholder="Enter resolution details to notify users..."></textarea>
+                    <button type="submit" class="notify-btn">Send
+                        Notification</button>
+                </form>
+            </section>
+        </div>
+    </body>
+</html>

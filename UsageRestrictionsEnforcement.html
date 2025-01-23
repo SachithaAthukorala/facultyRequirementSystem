@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Usage Restrictions Enforcement</title>
+        <style>
+    /* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  color: #4caf50;
+  margin: 0;
+}
+
+section {
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+section h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input, textarea, button {
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.result, .status, .alternatives {
+  margin-top: 15px;
+  padding: 15px;
+  border-top: 1px solid #ddd;
+  color: #666;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  section {
+    padding: 15px;
+  }
+
+  button {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+  </style>
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                <h1>Usage Restrictions Enforcement</h1>
+            </header>
+
+            <!-- Eligibility Check Section -->
+            <section class="eligibility-check">
+                <h2>Check User Eligibility</h2>
+                <form id="eligibility-form">
+                    <label for="user-id">User ID:</label>
+                    <input type="text" id="user-id" placeholder="Enter User ID"
+                        required>
+
+                    <label for="resource-id">Resource ID:</label>
+                    <input type="text" id="resource-id"
+                        placeholder="Enter Resource ID" required>
+
+                    <button type="submit" class="check-btn">Check
+                        Eligibility</button>
+                </form>
+                <div id="eligibility-result" class="result"></div>
+            </section>
+
+            <!-- Restriction Enforcement Section -->
+            <section class="restriction-enforcement">
+                <h2>Restriction Enforcement</h2>
+                <div id="restriction-status" class="status">
+                    <p>No restrictions detected. If restrictions are found, they
+                        will be displayed here.</p>
+                </div>
+            </section>
+
+            <!-- Suggest Alternatives Section -->
+            <section class="suggest-alternatives">
+                <h2>Suggested Alternatives</h2>
+                <div id="alternative-options" class="alternatives">
+                    <p>If the requested resource is unavailable, suggested
+                        alternatives will appear here.</p>
+                </div>
+            </section>
+
+            <!-- Log Restriction Enforcement Section -->
+            <section class="log-enforcement">
+                <h2>Log Restriction Enforcement Action</h2>
+                <form id="log-form">
+                    <label for="log-details">Restriction Details:</label>
+                    <textarea id="log-details" rows="4"
+                        placeholder="Enter details of the restriction enforcement..."
+                        required></textarea>
+                    <button type="submit" class="log-btn">Log Action</button>
+                </form>
+            </section>
+        </div>
+    </body>
+</html>

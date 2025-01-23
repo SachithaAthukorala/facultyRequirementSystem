@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Book Equipment</title>
+        <style>
+    /* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 2px solid #007bff;
+}
+
+header h1 {
+  color: #007bff;
+  margin: 0;
+}
+
+section {
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+section h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+label {
+  flex-basis: 100%;
+  font-weight: bold;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+}
+
+button.cancel {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Equipment List */
+#equipment-list {
+  border-top: 1px solid #ddd;
+  margin-top: 15px;
+  padding-top: 15px;
+  color: #666;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  form {
+    flex-direction: column;
+  }
+}
+
+  </style>
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                <h1>Book Equipment</h1>
+            </header>
+
+            <section class="filter-section">
+                <h2>Filter Equipment</h2>
+                <form id="filter-form">
+                    <label for="equipment-type">Equipment Type:</label>
+                    <select id="equipment-type">
+                        <option value>-- Select Type --</option>
+                        <option value="projector">Projector</option>
+                        <option value="laptop">Laptop</option>
+                        <option value="camera">Camera</option>
+                    </select>
+
+                    <label for="date">Booking Date:</label>
+                    <input type="date" id="date">
+
+                    <label for="time">Booking Time:</label>
+                    <input type="time" id="time">
+
+                    <button type="submit">Search</button>
+                </form>
+            </section>
+
+            <section class="available-equipment">
+                <h2>Available Equipment</h2>
+                <div id="equipment-list">
+                    <p>No equipment available. Use the filter above to
+                        search.</p>
+                </div>
+            </section>
+
+            <section class="booking-actions">
+                <h2>Booking Details</h2>
+                <form id="booking-form">
+                    <label for="selected-equipment">Selected Equipment:</label>
+                    <input type="text" id="selected-equipment" disabled
+                        placeholder="Select from available equipment">
+
+                    <label for="booking-reason">Reason for Booking:</label>
+                    <textarea id="booking-reason" rows="4"
+                        placeholder="Provide a reason for booking..."></textarea>
+
+                    <button type="submit" class="confirm">Confirm
+                        Booking</button>
+                    <button type="button" class="cancel">Cancel</button>
+                </form>
+            </section>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notification Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .container {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 1200px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .upcoming-bookings, .notification-history {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        .upcoming-bookings th, .upcoming-bookings td, 
+        .notification-history th, .notification-history td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        .upcoming-bookings th, .notification-history th {
+            background-color: #f8f8f8;
+            font-weight: bold;
+        }
+        .action-buttons button {
+            padding: 8px 12px;
+            margin-right: 5px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .action-buttons .confirm {
+            background-color: #28a745;
+            color: white;
+        }
+        .action-buttons .modify {
+            background-color: #ffc107;
+            color: black;
+        }
+        .action-buttons .cancel {
+            background-color: #dc3545;
+            color: white;
+        }
+        .preferences {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .preferences label {
+            margin-right: 10px;
+        }
+        .preferences select {
+            padding: 5px;
+        }
+        .preferences button {
+            margin-left: 10px;
+            padding: 8px 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Notification Management</h1>
+    </header>
+    <div class="container">
+
+        <!-- Upcoming Bookings Section -->
+        <div class="section">
+            <h2>Upcoming Bookings</h2>
+            <table class="upcoming-bookings">
+                <thead>
+                    <tr>
+                        <th>Booking ID</th>
+                        <th>Resource</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>101</td>
+                        <td>Room A</td>
+                        <td>2025-01-23</td>
+                        <td>10:00 AM</td>
+                        <td class="action-buttons">
+                            <button class="confirm">Confirm</button>
+                            <button class="modify">Modify</button>
+                            <button class="cancel">Cancel</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>102</td>
+                        <td>Projector 1</td>
+                        <td>2025-01-24</td>
+                        <td>2:00 PM</td>
+                        <td class="action-buttons">
+                            <button class="confirm">Confirm</button>
+                            <button class="modify">Modify</button>
+                            <button class="cancel">Cancel</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Notification Preferences Section -->
+        <div class="section">
+            <h2>Notification Preferences</h2>
+            <div class="preferences">
+                <label for="channel">Preferred Channel:</label>
+                <select id="channel">
+                    <option value="email">Email</option>
+                    <option value="sms">SMS</option>
+                    <option value="in-app">In-App</option>
+                </select>
+                <button>Save Preferences</button>
+            </div>
+        </div>
+
+        <!-- Notification History Section -->
+        <div class="section">
+            <h2>Notification History</h2>
+            <table class="notification-history">
+                <thead>
+                    <tr>
+                        <th>Booking ID</th>
+                        <th>Resource</th>
+                        <th>Status</th>
+                        <th>Channel</th>
+                        <th>Timestamp</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>100</td>
+                        <td>Room B</td>
+                        <td>Sent</td>
+                        <td>Email</td>
+                        <td>2025-01-21 8:00 AM</td>
+                    </tr>
+                    <tr>
+                        <td>99</td>
+                        <td>Lab Equipment</td>
+                        <td>Failed</td>
+                        <td>SMS</td>
+                        <td>2025-01-20 5:00 PM</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</body>
+</html>

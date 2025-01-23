@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maintenance Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            margin-top: 0;
+        }
+
+        .btn {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .btn-primary {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #45a049;
+        }
+
+        .btn-secondary {
+            background-color: #f44336;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background-color: #da190b;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        table th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .notifications {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .notifications p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>Maintenance Management</header>
+
+    <div class="container">
+        <div class="card">
+            <h3>Resource Status</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Resource Name</th>
+                        <th>Status</th>
+                        <th>Details</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lecture Hall A</td>
+                        <td>Available</td>
+                        <td>Seats: 100</td>
+                        <td><button class="btn btn-primary">Mark as Under Maintenance</button></td>
+                    </tr>
+                    <tr>
+                        <td>3D Printer</td>
+                        <td>Under Maintenance</td>
+                        <td>Requires filament replacement</td>
+                        <td><button class="btn btn-primary">Mark as Available</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="card">
+            <h3>Update Resource Status</h3>
+            <form>
+                <div class="form-group">
+                    <label for="resource">Select Resource:</label>
+                    <select id="resource">
+                        <option value="">-- Select --</option>
+                        <option value="1">Lecture Hall A</option>
+                        <option value="2">3D Printer</option>
+                        <option value="3">Robotic Arm</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="status">Update Status:</label>
+                    <select id="status">
+                        <option value="">-- Select Status --</option>
+                        <option value="available">Available</option>
+                        <option value="under-maintenance">Under Maintenance</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="details">Details:</label>
+                    <textarea id="details" rows="3" placeholder="Enter details about the maintenance"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+
+        <div class="notifications">
+            <p><strong>Notifications:</strong></p>
+            <p>No new notifications</p>
+        </div>
+    </div>
+</body>
+</html>
